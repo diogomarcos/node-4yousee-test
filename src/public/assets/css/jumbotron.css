@@ -1,0 +1,105 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+h3.custom {
+    padding-right: 5px;
+    color: beige;
+    padding-bottom: 10px;
+}
+
+.form-group.custom {
+    padding-right: 5px;
+}
+
+.badge-danger {
+    color: #fff;
+    background-color: #dc3545;
+}
+
+.badge-pill {
+    padding-right: 0.6em;
+    padding-left: 0.6em;
+    border-radius: 10rem;
+}
+
+.banner-sec .card-img-overlay {
+    padding: 0;
+    top: 3px;
+    left: 7px;
+    height: 20%;
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem;
+}
+
+.banner-sec .card {
+    margin-bottom: 20px;
+    margin-left: 4%;
+    margin-top: 4%;
+}
+
+.card {
+    float: left;
+    width: 89%;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+.banner-sec {
+    float: left;
+    width: 100%;
+    background: #EBEBEB;
+}
+
+.title-small {
+    color: #141517;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    margin: 6px 10px 0;
+}
+
+.text-time {
+    color: #ff0000;
+    font-weight: 600;
+    margin: 6px 0 0;
+}
+
+.card-text {
+    margin-left: 10px;
+}
+
+img.img-fluid {
+    height: 400px;
+}
+
+.error-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.error-actions {
+    margin-top:15px;
+    margin-bottom:15px;
+}
+.error-actions .btn {
+    margin-right:10px;
+}
