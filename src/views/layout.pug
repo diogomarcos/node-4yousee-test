@@ -1,0 +1,91 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(rel='icon', href='../../public/assets/img/nodejs.png')
+    title= title
+    // Bootstrap core CSS
+    link(href='../../public/assets/dist/css/bootstrap.min.css', rel='stylesheet')
+    // IE10 viewport hack for Surface/desktop Windows 8 bug
+    link(href='../../public/assets/assets/css/ie10-viewport-bug-workaround.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='../../public/assets/css/jumbotron.css', rel='stylesheet')
+    // Just for debugging purposes. Don't actually copy these 2 lines!
+    //if lt IE 9
+      script(src='../../public/assets/assets/js/ie8-responsive-file-warning.js')
+    script(src='../../public/assets/assets/js/ie-emulation-modes-warning.js')
+    // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') #{title}
+        #navbar.navbar-collapse.collapse
+          form.navbar-form.navbar-right(action = "/", method = "POST")
+            .form-group
+              h3.custom Category
+            .form-group.custom
+              select.form-control(name='selectpicker')
+                if(selectpicker==='All')
+                  option(value='All', selected='') All
+                else
+                  option(value='All') All
+                each category in categories
+                  if(selectpicker===category.category)
+                    option(value=category.category, selected='') #{category.category}
+                  else
+                    option(value=category.category) #{category.category}
+            button.btn.btn-success(type='submit') Filter
+        // /.navbar-collapse
+    // Main jumbotron for a primary marketing message or call to action
+    .jumbotron
+      .container
+        h1 Media
+        p
+          | Here are all the media registered in the system. In the selection above you can filter the media according to the desired category.
+    .container
+      // Example row of columns
+      section.banner-sec
+        .container
+          .row
+            .col-md-12
+              each filter in filtered
+                .card
+                  img.img-fluid(src=filter.thumbnail, alt='')
+                  .card-img-overlay
+                    span.badge.badge-pill.badge-danger #{filter.category}
+                  .card-body
+                    .news-title
+                      h2.title-small
+                        a(href='#') #{filter.title}
+                    p.card-text #{filter.description}
+                    p.card-text
+                      small.text-time
+                        Type Type: #{filter.type}
+      hr
+      footer
+        p #{copyright} #{author}
+    // /container
+    //
+      Bootstrap core JavaScript
+      ==================================================
+    // Placed at the end of the document so the pages load faster
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script.
+      window.jQuery || document.write('<script src="../../public/assets/assets/js/vendor/jquery.min.js"><\\/script>')
+    script(src='../../public/assets/dist/js/bootstrap.min.js')
+    // IE10 viewport hack for Surface/desktop Windows 8 bug
+    script(src='../../public/assets/assets/js/ie10-viewport-bug-workaround.js')
