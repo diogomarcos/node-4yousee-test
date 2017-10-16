@@ -51,11 +51,6 @@ o comando abaixo para executar a aplicação:
 
         http://localhost:3000
 
-### Considerações Complementares
-1. Para ter acesso ao review online da aplicação, basta utilizar o endereço abaixo:
-
-        https://node-4yousee-test.herokuapp.com/
-
 ### Resultado do Desenvolvimento
 Abaixo estão disponibilizados as telas da aplicação:
 
