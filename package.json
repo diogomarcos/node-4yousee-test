@@ -1,0 +1,32 @@
+{
+  "name": "node-4yousee-test",
+  "version": "1.0.0",
+  "description": "Consuming an API made available by the company 4YouSee",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diogomarcos/node-4yousee-test.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "ExpressJS",
+    "4YouSee"
+  ],
+  "author": "Diogo Marcos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diogomarcos/node-4yousee-test/issues"
+  },
+  "homepage": "https://github.com/diogomarcos/node-4yousee-test#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "lodash.where": "^3.1.0",
+    "pug": "^2.0.0-rc.4",
+    "request": "^2.83.0"
+  }
+}
